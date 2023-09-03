@@ -1,1 +1,152 @@
 just a three week like rending, however using one week
+
+Changes:
+Functional Extensions
+
+    Optimizations: Optimize the basic ray tracer for performance using techniques like bounding volume hierarchies (BVH), multithreading, or GPU acceleration.
+
+    Adaptive Sampling: Implement adaptive sampling to focus more rays on complex areas of a scene, reducing noise and improving image quality.
+
+    Real-Time Rendering: Convert the ray tracer into a real-time application, perhaps integrating it with a game engine.
+
+    Depth of Field: Add depth of field effects to simulate the behavior of real camera lenses.
+
+    Motion Blur: Implement motion blur to simulate objects moving at high speeds.
+
+Visual Enhancements
+
+    Advanced Materials: Extend the materials to include more complex properties like subsurface scattering, metallic flakes, or anisotropy.
+
+    Global Illumination: Incorporate algorithms that simulate global illumination effects like photon mapping or radiosity.
+
+    Volumetric Rendering: Implement volumetric rendering to simulate fog, smoke, or other participating media.
+
+    Texture Mapping: Add texture mapping support to allow more detailed surfaces.
+
+    Custom Shapes: Instead of just spheres, implement support for other geometric shapes like cubes, cylinders, or even more complex mesh shapes.
+
+Scene Complexity
+
+    Dynamic Scenes: Allow for scenes where objects can move or be interactively placed by a user.
+
+    Procedural Generation: Use procedural generation techniques to create complex and unique scenes.
+
+    Import from Files: Implement the ability to import scenes or objects from external files, like OBJ or FBX.
+
+    Animation: Extend your ray tracer to support simple animations or even keyframed sequences.
+
+User Interface
+
+    Camera Controls: Add a simple user interface to control the camera view or to tweak scene parameters in real-time.
+
+    Settings UI: Add a user interface to dynamically adjust settings like resolution, anti-aliasing, or material properties.
+
+    Progressive Rendering: Instead of rendering the whole image at once, show a progressively refined preview as the rendering proceeds.
+
+Hybrid Techniques
+
+    Path Tracing/Rasterization Hybrid: Use rasterization for some elements and ray tracing for others, combining the strengths of both approaches.
+
+    Real-Time Post-Processing: Add real-time post-processing effects like color grading, bloom, or tone mapping.
+
+    Additional Physics-Based Features
+
+    Caustics: Simulate the focusing of light through transparent objects to generate caustics.
+    Dispersion: Implement chromatic dispersion to simulate the splitting of light into its constituent colors when passing through transparent objects.
+    Polarization: Model the polarization of light and how it interacts with surfaces.
+    Light Sources: Add different types of light sources like point lights, area lights, and spotlights.
+
+Algorithms and Techniques
+
+    Metropolis Light Transport: Use more advanced algorithms like Metropolis Light Transport to improve the simulation of light paths.
+    Blue Noise Sampling: Implement blue noise sampling techniques to make noise patterns less distracting.
+    Reinforcement Learning: Use machine learning techniques to improve ray-tracing decisions, like where to sample next.
+
+Special Effects
+
+    Lens Flares and Ghosting: Add post-processing effects to simulate lens flares and ghosting, as seen in real-world cameras.
+    Cell Shading: Add an option for a non-photorealistic, cartoon-like rendering.
+    Night Vision: Simulate night vision, thermal imaging, or other specialized optics.
+
+Visualization and Analytics
+
+    Heatmap: Create a heatmap overlay showing areas of the scene where the most computation time is spent.
+    Path Visualization: Visualize the paths rays take through the scene.
+    Spectral Rendering: Go beyond RGB and simulate a wider range of the electromagnetic spectrum for scientifically accurate rendering.
+
+Interactivity and User Experience
+
+    Multi-View Rendering: Allow for simultaneous rendering of the same scene from multiple viewpoints.
+    VR Integration: Modify your ray tracer to produce output suitable for virtual reality headsets.
+    Networked Rendering: Allow multiple computers to work together to render a single scene.
+
+Real-world Simulation
+
+    Weather Effects: Simulate weather effects like rain, snow, or fog interacting with the scene.
+    Sky Model: Implement a physically-based sky model.
+    Vegetation: Add procedurally generated trees, grass, and other vegetation.
+
+    Modularity and Usability
+
+    Plug-in Architecture: Implement a plug-in architecture to easily add new features, materials, or shapes.
+    Batch Rendering: Add functionality to queue multiple render settings or scenes to be processed in sequence.
+    Scene Description Language: Implement a small language or parser to describe scenes in text files, enabling easier sharing and modification of scenes.
+
+Educational Tools
+
+    Interactive Tutorials: Create an interactive tutorial mode that guides new users through the basics of ray tracing, complete with real-time visual feedback.
+    Debugging Mode: Add a debugging mode that visually shows how each ray interacts with the scene, useful for learning and debugging.
+
+    Computational and Technical Extensions
+
+    Distributed Rendering: Use cloud computing resources to distribute the rendering task over multiple nodes.
+    Vectorization: Utilize SIMD (Single Instruction, Multiple Data) instructions to speed up the computation.
+    Adaptive Resolution: Dynamically lower the resolution in less important parts of the image to speed up rendering.
+
+User Interaction and Realism
+
+    Selective Rendering: Allow the user to select regions of the viewport for higher-quality rendering.
+    Time of Day Simulation: Enable a dynamic adjustment of lighting conditions to simulate different times of the day.
+    User-Driven Object Manipulation: Allow users to move, rotate, and scale objects in real-time and see the rendering update.
+
+Miscellaneous Visual Features
+
+    Shadow Maps: Use shadow maps for faster and more versatile shadow calculations.
+    Light Shaft / God Rays: Add volumetric light shafts to simulate "God rays" shining through gaps in objects.
+    Parallax Mapping: Implement parallax mapping for a more complex simulation of surface detail.
+    Camera Aberrations: Simulate various camera lens aberrations like barrel distortion.
+
+Analytical Tools
+
+    Performance Profiling: Integrate performance profiling tools to help you understand where your code is spending the most time.
+    Color Grading: Allow for post-process color adjustments for artistic or analytic purposes.
+
+Special Environments
+
+    Underwater Scenes: Implement the unique lighting and visibility conditions of underwater scenes.
+    Space Scenes: Add specific features that simulate the behavior of light and matter in outer space.
+
+Multimedia Integration
+
+    Audio: Associate sound with objects or events in the scene (like collisions or material interactions).
+    Video Texture: Allow surfaces to be textured with video, not just static images.
+
+Interoperability
+
+    REST API: Create a REST API so other applications can submit scenes for rendering.
+    Real-Time Data Integration: Pull real-time data into your ray tracer (like weather conditions for a physical location, stock prices for a data visualization, etc.).
+
+Algorithmic Approaches
+
+    Machine Learning Denoising: Use machine learning algorithms to denoise the final rendered image.
+    Inverse Rendering: Implement algorithms to solve the inverse problem—determining the scene configuration from a given image.
+
+Rendering Styles
+
+    Wireframe Mode: Add a rendering mode that shows only the edges of objects, creating a wireframe look.
+    Silhouette Rendering: Enhance the ray tracer to only render the silhouettes of objects, for an artistic or schematic output.
+
+Quality of Life
+
+    Pause and Resume: Allow long renders to be paused and resumed.
+    Resource Monitoring: Add features to monitor CPU, memory, and GPU usage during rendering.
