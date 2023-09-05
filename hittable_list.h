@@ -1,13 +1,23 @@
 #ifndef HITTABLE_LIST_H
 #define HITTABLE_LIST_H
+//==============================================================================================
+// Originally written in 2016 by Peter Shirley <ptrshrl@gmail.com>
+//
+// To the extent possible under law, the author(s) have dedicated all copyright and related and
+// neighboring rights to this software to the public domain worldwide. This software is
+// distributed without any warranty.
+//
+// You should have received a copy (see file COPYING.txt) of the CC0 Public Domain Dedication
+// along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+//==============================================================================================
+
+#include "rtweekend.h"
 
 #include "hittable.h"
 
 #include <memory>
 #include <vector>
 
-using std::shared_ptr;
-using std::make_shared;
 
 class hittable_list : public hittable {
   public:
@@ -22,13 +32,15 @@ class hittable_list : public hittable {
         objects.push_back(object);
     }
 
-    bool hit(const ray& r, double ray_tmin, double ray_tmax, hit_record& rec) const override {
+    bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
+        
         hit_record temp_rec;
-        bool hit_anything = false;
-        auto closest_so_far = ray_tmax;
+        auto hit_anything = false;
+        auto closest_so_far = ray_t.max;
 
         for (const auto& object : objects) {
-            if (object->hit(r, ray_tmin, closest_so_far, temp_rec)) {
+            
+            if (object->hit(r, interval(ray_t.min, closest_so_far), temp_rec)) {
                 hit_anything = true;
                 closest_so_far = temp_rec.t;
                 rec = temp_rec;
@@ -39,5 +51,5 @@ class hittable_list : public hittable {
     }
 };
 
-#endif
 
+#endif
